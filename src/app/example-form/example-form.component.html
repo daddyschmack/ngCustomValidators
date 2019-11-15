@@ -1,0 +1,12 @@
+<form (ngSubmit)="submit(formName)" [formGroup]="formName">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-12">
+        <input formControlName="numberInput" type="text">
+      </div>
+    </div>
+  </div>
+  <small class="form-text text-muted" *ngIf="formName.get('numberInput').touched && formName.get('numberInput').hasError('required')">This field is required!</small>
+  <small class="form-text text-muted" *ngIf="formName.get('numberInput').touched && formName.get('numberInput').hasError('invalidNumber')">Numbers accepted only!</small>
+  <button type="submit" class="btn btn-primary" [disabled]="formName.invalid">Submit</button>
+</form>
