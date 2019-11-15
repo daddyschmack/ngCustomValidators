@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomValidator} from '../assets/custom-validators';
 
 @Component({
   selector: 'app-root',
